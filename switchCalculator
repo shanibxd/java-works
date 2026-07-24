@@ -6,7 +6,7 @@ public class Main{
         double num1;
         double num2;
         char operation;
-        double result;
+
 
         System.out.print("Enter first number :");
         num1 = scanner.nextDouble();
@@ -20,7 +20,15 @@ public class Main{
         switch(operation){
             case '+' -> System.out.println(num1+num2);
             case '-' -> System.out.println(num1-num2);
-            case '/' -> System.out.println(num1/num2);
+            case '/' -> {
+                if(num2 == 0 )
+                {
+                    System.out.println("Number cannot be divided by zero");
+                }
+                else {
+                    System.out.println(num1 / num2);
+                }
+            }
             case '*' -> System.out.println(num1*num2);
             default -> System.out.println("Enter valid operation");
         }
